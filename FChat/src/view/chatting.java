@@ -170,7 +170,7 @@ public class chatting extends JFrame{
 	
 	public static void addmyrecordmy(String message) {
         
-        record.append("myself"+"："+message+"\n");
+        record.append("To - "+receiver+"："+message+"\n");
     }
 	
 	public static void addrecord(String receive, String receiveMessage) {
