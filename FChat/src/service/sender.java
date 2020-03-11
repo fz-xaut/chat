@@ -25,5 +25,16 @@ public class sender {
                 e.printStackTrace();
             }
     }
+    
+    public void sendMessage(String sender) throws InterruptedException {
+            try {
+                System.out.println(chatting.socket);
+                DataOutputStream input = new DataOutputStream(chatting.socket.getOutputStream());
+                input.writeUTF(sender+receiver+message);
 
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
+    
 }
