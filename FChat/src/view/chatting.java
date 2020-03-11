@@ -30,7 +30,7 @@ public class chatting extends JFrame{
 	    new connect().connecting();
 	    sender sending = new sender();
 	    try {
-            sending.sendMessage(username, null, null);
+            sending.sendMessage(username);
         } catch (InterruptedException e2) {}
 	    
 	    receiver receive = new receiver();
@@ -47,8 +47,8 @@ public class chatting extends JFrame{
 		JButton clear = new JButton();
 		JButton searching = new JButton();
 		JTextArea title = new JTextArea();
-		JButton close = new JButton("¹Ø±Õ");
-		JButton send = new JButton("·¢ËÍ");
+		JButton close = new JButton("å…³é—­");
+		JButton send = new JButton("å‘é€");
         record.setEditable(false);
 		myword.setEditable(false);
 		
@@ -67,9 +67,9 @@ public class chatting extends JFrame{
 	            @Override
 	            public void mouseClicked(MouseEvent e) {
 	                
-	                //ÕâÀï¿ªÊ¼²åÈëÁÄÌìµÄ¹¦ÄÜ
+	                //è¿™é‡Œå¼€å§‹æ’å…¥èŠå¤©çš„åŠŸèƒ½
 	                receiver = newContact.getText().trim();
-	                title.setText("ÕıÔÚÓë"+receiver+"ÁÄÌì...");
+	                title.setText("æ­£åœ¨ä¸"+receiver+"èŠå¤©...");
 	                title.setFont(new Font("Serif",0,22));
 	                title.setEditable(false);
 	                myword.requestFocus();
@@ -106,12 +106,12 @@ public class chatting extends JFrame{
         send.setBounds(795,400,80,30);
 		myword.setBounds(325,435,552,212);
 		
-		my.setText("FNo: "+username+"\nµ±Ç°ÔÚÏß");
+		my.setText("FNo: "+username+"\nå½“å‰åœ¨çº¿");
 		my.setFont(new Font("Serif",0,30));
 		my.setEditable(false);
 		search.setFont(new Font("Serif",0,20));
-		clear.setText("Çå¿Õ");
-		searching.setText("ËÑË÷");
+		clear.setText("æ¸…ç©º");
+		searching.setText("æœç´¢");
 		clear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 search.setText("");
@@ -170,11 +170,11 @@ public class chatting extends JFrame{
 	
 	public static void addmyrecordmy(String message) {
         
-        record.append("myself"+"£º"+message+"\n");
+        record.append("myself"+"ï¼š"+message+"\n");
     }
 	
 	public static void addrecord(String receive, String receiveMessage) {
 	    
-	    record.append(receive+"£º"+receiveMessage+"\n");
+	    record.append(receive+"ï¼š"+receiveMessage+"\n");
 	}
 }
